@@ -16,6 +16,7 @@ nav {
         /* background-color: #333; */
         background: linear-gradient(to left, #f46b45, #eea849);
         position: fixed;
+        z-index:1;
         top: 0;
         width: 100%;
     }
@@ -76,9 +77,9 @@ nav {
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href='sellWindow.html'>About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
+    <a href='sellWindow.html'>Sell Item</a>
+    <a href="#">My Items</a>
+    <a href="#">Job Board</a>
     <a href="#">Contact</a>
   </div>
 </div>
@@ -91,12 +92,12 @@ nav {
 <script>
     function openNav() {
     document.getElementById("myNav").style.width = "100%";
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
     }
 
     function closeNav() {
     document.getElementById("myNav").style.width = "0%";
-    document.body.style.overflow = "visible";
+    // document.body.style.overflow = "visible";
     }
 </script>
      
