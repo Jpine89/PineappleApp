@@ -6,9 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <style>
     body {
         margin:0;
@@ -28,7 +30,13 @@
     display: none;
     }
 
-
+    .footer{
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to left, #f46b45, #eea849);
+        width: 100%;
+    }
 </style>
         <!--Navigation bar-->
         <div id="nav-placeholder"></div>
@@ -42,45 +50,83 @@
         <!--end of Navigation bar-->
 </head>
 <body onload="pageInit()">
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>some content</p>
+                <input type="text" name="itemID" id="itemID" value=""/>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <scetion >
         <div style="padding:20px;margin-top:30px;background-color:#1abc9c;">
             <h1>Fixed Top Navigation Bar</h1>
+            
             <ul  class="listDesign" id="myList" style="padding:0;">
             </ul>            
         </div>
     </scetion>
+    <footer class="footer">
+        <div class="row">
+            <div class="col bi bi-arrow-left"> Left</div>
+            <div class="col bi bi-arrow-right-circle" style="text-align: right;"> Right</div>
+        </div>   
+    </footer>
 </body>
-
 
 <script>
 
-$('div').on('click', 'div.container', function() {
-    $(this).addClass('selected').siblings().removeClass('selected');
-});
+function itemSelected(id){
+    // var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), options)
+    // myModal.show();
+    $('#exampleModal').modal('show');
+    $(".modal-body #itemID").val( id );
+    // alert(id);
+}
+
+// $('div').on('click', 'div.container', function() {
+//     alert($(this).val());
+//     // $(this).addClass('selected').siblings().removeClass('selected');
+// });
 
 function pageInit(){
     // alert("Page is loaded");
 
     for (let i = 0; i < 10; i++){
         console.log("test");
-        document.getElementById("myList").appendChild(createItem());
+        document.getElementById("myList").appendChild(createItem(i));
     }
 
 }
 
-function createItem(){
+function createItem(itemNumber){
     // Create  node:
     var card = document.createElement("div");
     card.setAttribute("class", "card text-white bg-primary mb-3");
     card.setAttribute("style", "max-width: 18rem;");
 
     //body;
-    var body = document.createElement("div");
-    body.setAttribute("class", "card-body");
+    // var body = document.createElement("div");
+    // body.setAttribute("class", "card-body");
     
         //div container
         var container = document.createElement("div");
         container.setAttribute("class", "container");
+        container.setAttribute("id", itemNumber);
+        container.setAttribute("onclick", 'itemSelected('+itemNumber+')')
 
             //div row
             
@@ -90,8 +136,8 @@ function createItem(){
             container.appendChild(createItemRow("ItemSeller: ", "Pineapple"));
 
 
-        body.appendChild(container);
-    card.appendChild(body);
+        // body.appendChild(container);
+    card.appendChild(container);
 
     return card;
 }
