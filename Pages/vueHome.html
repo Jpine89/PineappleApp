@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue Pineapple App</title>
+        <link rel="stylesheet" href="../Styles/main.css">
+        <script src="https://unpkg.com/vue@3"></script>
+    </head>
+    <body>
+        <div id="helloWorld">
+            <h1>{{header}}</h1>
+        </div>
+        
+        <script>
+            Vue.createApp({
+                data(){
+                    return{
+                        header: "test"
+                    }
+                },
+                method:{
+                    saveitem(key, index){
+                        
+                    }
+                }
+            })
+            .mount('#helloWorld')
+        </script>
+
+        <script setup>
+            // variable
+            const msg = 'Hello!'
+            
+            // functions
+            function log() {
+            console.log(msg)
+            }
+        </script>
+            
+    </body>
+</html>
+
