@@ -28,9 +28,9 @@ test.style.width = "0%";
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
         <div class="overlay-content">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/market">Market</RouterLink>
+        <RouterLink to="/" @click="closeNav">Home</RouterLink>
+        <RouterLink to="/about" @click="closeNav">About</RouterLink>
+        <RouterLink to="/market" @click="closeNav">Market</RouterLink>
         </div>
     </div>
   </header>
@@ -54,10 +54,10 @@ body {
 
 nav {
       background: linear-gradient(to left, #f46b45, #eea849);
-      position: fixed;
+      /* position: fixed;
       z-index:1;
       top: 0;
-      width: 100%;
+      width: 100%; */
     }
 
 

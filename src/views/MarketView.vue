@@ -1,18 +1,15 @@
 <script setup lang="ts">
+    import MarketList from '@/components/MarketList.vue'
     var overlay: false;
 </script>
 
 <template>
-    <body>
-        <scetion class="item">
-            <div class="test">
-                <div>Fixed Top Navigation Bar</div>
-                
-                <ul  class="listDesign" id="myList" style="padding:0;">
-                </ul>            
-            </div>
-        </scetion>
-    </body>
+    <div class="listView">
+
+        <div>Fixed Top Navigation Bar</div>
+        <MarketList />
+        
+    </div>
 
 
     <footer class="footer">
@@ -35,17 +32,14 @@
 </script>
 
 <style scoped>
-    body{
-        background-color: #1abc9c;
-    }
     /* .item {
     margin-top: 2rem;
     display: flex;
     } */
 
-    .test{
+    .listView{
         padding:20px;
-        margin-top:45px;
+        /* margin-top:45px; */
         background-color:#1abc9c;
         height: 100%;
     }

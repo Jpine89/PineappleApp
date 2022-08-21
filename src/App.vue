@@ -6,10 +6,7 @@ import NavComp from './components/NavComp.vue'
 
 <template>
   <NavComp />
-  <body>
-    <RouterView />
-  </body>
-  
+  <RouterView />
 </template>
 
 <script lang="ts">
