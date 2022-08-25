@@ -6,7 +6,7 @@
 <template>
     <div class="listView">
 
-        <div>Fixed Top Navigation Bar</div>
+        <div class="text-h5" style="text-align: center; color: black;" >Market Menu</div>
         <MarketList />
         
     </div>
@@ -40,7 +40,7 @@
     .listView{
         padding:20px;
         /* margin-top:45px; */
-        background-color:#1abc9c;
+        
         height: 100%;
     }
 

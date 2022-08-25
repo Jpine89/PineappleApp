@@ -2,6 +2,24 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import NavComp from './components/NavComp.vue'
+import kuzzle from './services/kuzzle.vue'
+
+// async function valid() {
+//   // Etablish the connection
+//   await kuzzle.connect();
+//   // Check if 'chat' index exists
+//   if (! await kuzzle.index.exists("chat")) {
+//     // If not, create 'chat' index and 'messages' collection
+//     await kuzzle.index.create("chat");
+//     await kuzzle.collection.create("chat", "messages");
+//   }
+//   await this.fetchMessages();
+//   await this.subscribeMessages();
+//   this.validate = true;
+// }
+
+// valid();
+
 </script>
 
 <template>
@@ -12,6 +30,7 @@ import NavComp from './components/NavComp.vue'
 <script lang="ts">
   import { ref } from 'vue'
   var test;
+
 
   function openNav() {
     test = document.getElementById('myNav');
