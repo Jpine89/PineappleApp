@@ -28,7 +28,7 @@ test.style.width = "0%";
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
         <div class="overlay-content">
-        <RouterLink to="/" @click="closeNav">Home</RouterLink>
+        <RouterLink to="/index.html" @click="closeNav">Home</RouterLink>
         <RouterLink to="/about" @click="closeNav">About</RouterLink>
         <RouterLink to="/market" @click="closeNav">Market</RouterLink>
         </div>
