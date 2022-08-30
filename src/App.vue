@@ -23,8 +23,13 @@ import kuzzle from './services/kuzzle.vue'
 </script>
 
 <template>
-  <NavComp />
-  <RouterView />
+  
+  <section>
+    <NavComp />
+    <RouterView />
+    
+    
+  </section>
 </template>
 
 <script lang="ts">
@@ -44,58 +49,25 @@ import kuzzle from './services/kuzzle.vue'
 </script>
 
 <style scoped>
-body{
-  background-color: grey;
-}
-/* nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-} */
+  section {
+    background-color: grey;
+    /* min-height: 100vh; */
+      border-radius: 1em;
+      padding: 1em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      /* transform: translate(-50%, -50%); */
+      border-style: solid;
+      border-color: red;
+      height: 48.5vh;
+      width: 25.65vh; 
+      overflow:hidden;
+      overflow-y: scroll;
+    }
 
-/* nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-} */
-
-/* nav a:first-of-type {
-  border: 0;
-} */
-
-/* @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-} */
+    section::-webkit-scrollbar {
+    display: none;
+    }
 </style>

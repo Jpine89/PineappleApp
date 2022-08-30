@@ -46,7 +46,7 @@
 
     .footer{
         z-index: 1;
-        position: fixed;
+        /* position: fixed; */
         bottom: 0;
         left: 0px;
         right: 0px;
