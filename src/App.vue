@@ -53,12 +53,12 @@ import kuzzle from './services/kuzzle.vue'
     background-color: grey;
     /* min-height: 100vh; */
       border-radius: 1em;
-      padding: 1em;
+      /* padding: 1em; */
       position: absolute;
       top: 50%;
       left: 50%;
       margin-right: -50%;
-      /* transform: translate(-50%, -50%); */
+      transform: translate(-50%, 50%);
       border-style: solid;
       border-color: red;
       height: 48.5vh;

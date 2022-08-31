@@ -10,10 +10,10 @@ import './assets/main.css'
 // Import icon libraries
 import '@quasar/extras/material-icons/material-icons.css'
 
-// Import Quasar css
+// // Import Quasar css
 import 'quasar/src/css/index.sass'
 
-const app = createApp(App)
+const app = createApp(App)  
 
 app.use(Quasar, {
     plugins: {}, // import Quasar plugins and add here
